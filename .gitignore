@@ -1,12 +1,59 @@
+# =========================
+# Environment / Secrets
+# =========================
 .env
+.env.*
+!.env.example
+
+# =========================
+# Python
+# =========================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
 .ipynb_checkpoints/
-chroma_store_openai/
-temp.pdf
+
+# =========================
+# Virtual Environments
+# =========================
 venv/
-.env/
+.venv/
+env/
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/secrets.toml
+
+# =========================
+# Vector DB / Embeddings / ML artifacts
+# =========================
+chroma_store/
+chroma_store_openai/
 *.pkl
 *.faiss
 *.index
 *.sqlite3
+
+# =========================
+# Temporary / Generated Files
+# =========================
+temp.pdf
+*.log
+*.tmp
+*.cache
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db

@@ -1,0 +1,31 @@
+langchain==0.0.284
+python-dotenv==1.0.0
+streamlit==1.22.0
+unstructured==0.9.2
+tiktoken==0.4.0
+pypdf==4.1.0
+youtube-transcript-api==0.6.2
+
+# Local embeddings (sentence-transformers)
+sentence-transformers>=2.2.2
+
+# Hugging Face API (LLM via Inference API)
+huggingface_hub>=0.19.0
+
+# FAISS: optional and not used by this app’s code path.
+# If you need FAISS on Linux/macOS, install it manually (e.g. via conda-forge).
+# It is intentionally omitted from pip requirements here to avoid install
+# failures on Windows / newer Python versions where matching wheels are
+# not available.
+
+# Chroma vector store (used instead of FAISS, pure Python).
+# Pin below 0.4.16 to avoid newer EmbeddingFunction API that
+# is incompatible with langchain==0.0.284.
+chromadb>=0.4.0,<0.4.16
+
+# HTML parsing dependency for WebBaseLoader
+beautifulsoup4>=4.12.0
+
+# libmagic bindings: choose the right package per OS.
+python-magic-bin==0.4.14; platform_system == "Windows"
+python-magic==0.4.27; platform_system != "Windows"
